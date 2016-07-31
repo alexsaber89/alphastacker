@@ -4,7 +4,12 @@ function stackLetters() {
   var noSpaces = "";
   for (var i = 0; i < letters.length; i++) {
     letterRow += letters[i];
-    console.log(letterRow);
+    noSpaces = letterRow.replace(/\s/g, "");
+    if (noSpaces.length % 5 === 0) {
+      letterRow += " ";
+    } else {
+      console.log(letterRow);
+    }
   }
 }
 stackLetters();
